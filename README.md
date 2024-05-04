@@ -4,7 +4,7 @@ A hybrid product search using Postgres full-text search and semantic querying us
 
 ### Tech stack
 
-* Next.js
+* Next.js 14
 * Postgres
 * Upstash vector indexes
 * Drizzle ORM
