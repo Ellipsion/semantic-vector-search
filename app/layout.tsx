@@ -26,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="absolute top-0 right-0 z-50 p-10">
+          <div className="absolute top-0 right-0 md:z-50 p-10">
             <ModeToggle />
           </div>
           <div className="relative min-h-screen isolate overflow-hidden bg-background">

@@ -21,7 +21,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <p className="max-w-xl text-center text-lg text-accent-foreground/80">
         A beautifully designed, hybrid search engine that uses{" "}
         <code>semantic vector search</code> with{" "}
-        <code>Postgres' full-text</code> search.
+        <code>Postgres&apos; full-text</code> search.
       </p>
 
       <div className="mx-auto mt-16 w-full max-w-2xl flex flex-col">
