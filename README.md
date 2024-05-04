@@ -10,4 +10,4 @@ A hybrid product search using Postgres full-text search and semantic querying us
 * Drizzle ORM
 * Shadcn UI - Tailwind CSS
 
-![1714829355269](image/README/1714829355269.png)
+![screenshot](public/screenshot.png "App Screenshot")
