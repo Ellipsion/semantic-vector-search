@@ -27,7 +27,7 @@ const ProductPage: FC<ProductPageProps> = async ({ params }) => {
   if (!product) return notFound();
 
   return (
-    <div className="py-8 pb-8 px-12 divide-y divide-zinc-100 bg-white shadow-md border rounded-md">
+    <div className="py-8 pb-8 px-12 divide-y divide-zinc-100 bg-white shadow-md border rounded-md animate-fade-in">
       <div>
         <div className="mt-4 flex gap-x-5">
           <BackButton />

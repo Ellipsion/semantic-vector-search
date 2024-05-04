@@ -81,7 +81,7 @@ const SearchPage: FC<SearchPageProps> = async ({ searchParams }) => {
   return (
     <ul className="py-4 divide-y divide-zinc-100 bg-white shadow-md rounded">
       {products.map((product) => (
-        <Link key={product.id} href={`/products/${product.id}`}>
+        <Link key={product.id} href={`/products/${product.id}`} scroll={true}>
           <ProductCard product={product} />
         </Link>
       ))}
