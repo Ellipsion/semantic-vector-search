@@ -27,11 +27,11 @@ const ProductPage: FC<ProductPageProps> = async ({ params }) => {
   if (!product) return notFound();
 
   return (
-    <div className="py-8 pb-8 px-12 divide-y divide-zinc-100 bg-white shadow-md border rounded-md animate-fade-in">
+    <div className="py-2 md:py-8 px-5 md:px-12 divide-y divide-zinc-100 bg-white shadow-md rounded-md animate-fade-in">
       <div>
         <div className="mt-4 flex gap-x-5">
           <BackButton />
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {product.name}
           </h1>
         </div>
