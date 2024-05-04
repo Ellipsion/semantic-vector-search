@@ -9,3 +9,5 @@ A hybrid product search using Postgres full-text search and semantic querying us
 * Upstash vector indexes
 * Drizzle ORM
 * Shadcn UI - Tailwind CSS
+
+![1714829355269](image/README/1714829355269.png)
