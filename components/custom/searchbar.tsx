@@ -3,6 +3,7 @@
 import {
   FC,
   KeyboardEventHandler,
+  useEffect,
   useRef,
   useState,
   useTransition,
@@ -10,17 +11,23 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Loader2, Search } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface SearchBarProps {}
 
 // intuitive and functional
 
 const SearchBar: FC<SearchBarProps> = ({}) => {
+  const searchParams = useSearchParams();
+  const defaultQuery = searchParams.get("query") || "";
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [isSearching, startTransition] = useTransition();
-  const [query, setQuery] = useState<string>("");
+  const [query, setQuery] = useState<string>(defaultQuery);
+
+  useEffect(() => {
+    setQuery(defaultQuery);
+  }, [defaultQuery]);
 
   const search = () => {
     startTransition(() => {

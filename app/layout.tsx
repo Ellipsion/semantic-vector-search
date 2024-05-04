@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import HomepageBg from "@/components/custom/homepage-svg";
-import { Sparkles } from "lucide-react";
-import { Icons } from "@/components/custom/icons";
-import SearchBar from "@/components/custom/searchbar";
+import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,28 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="relative min-h-screen isolate overflow-hidden border-b border-gray-200 bg-white">
-          <HomepageBg />
-          <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex gap-16 lg:px-8 lg:py-24">
-            <div className="h-full w-full flex flex-col items-center gap-4">
-              <Icons.Sparkles className="w-16 h-16" />
-              <h1 className="text-4xl tracking-tight sm:text-6xl font-bold">
-                Magic Search
-              </h1>
-              <p className="max-w-xl text-center text-lg text-slate-700">
-                A beautifully designed, hybrid search engine that uses `semantic
-                vector search` along with Postgres `full text` search.
-              </p>
-
-              <div className="mx-auto mt-16 w-full max-w-2xl flex flex-col">
-                <SearchBar />
-                {children}
-              </div>
-            </div>
-          </div>
-        </div>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
