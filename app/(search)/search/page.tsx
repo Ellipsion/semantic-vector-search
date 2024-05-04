@@ -67,7 +67,7 @@ const SearchPage: FC<SearchPageProps> = async ({ searchParams }) => {
 
   if (products.length === 0) {
     return (
-      <div className="text-center py-10 bg-white shadow-md rounded-b-md">
+      <div className="text-center py-10 bg-background shadow-md rounded-b-md">
         <X className="mx-auto h-24 w-24 text-gray-200" />
         <h3 className="mt-2 text-sm font-semibold text-gray-900">No results</h3>
         <p>
@@ -79,7 +79,7 @@ const SearchPage: FC<SearchPageProps> = async ({ searchParams }) => {
   }
 
   return (
-    <ul className="py-4 divide-y divide-zinc-100 bg-white shadow-md rounded">
+    <ul className="py-4 divide-y divide-zinc-100 bg-background shadow-md rounded-b">
       {products.map((product) => (
         <Link key={product.id} href={`/products/${product.id}`} scroll={true}>
           <ProductCard product={product} />

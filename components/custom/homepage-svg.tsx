@@ -1,12 +1,17 @@
 import { FC } from "react";
 
 interface HomepageBgProps {}
-
+// [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]
+/* .mask-image {
+  mask-image: radial-gradient(100% 100% at top right, white, transparent);
+} 
+*/
 const HomepageBg: FC<HomepageBgProps> = ({}) => {
   return (
     <svg
-      className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+      className="absolute inset-0 -z-10 h-full w-full stroke-accent bg-background [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
       aria-hidden="true"
+      style={{}}
     >
       <defs>
         <pattern

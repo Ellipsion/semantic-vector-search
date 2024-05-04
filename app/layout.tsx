@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/providers/theme-provider";
 import "@/app/globals.css";
+import { ModeToggle } from "@/components/custom/theme-toggle";
+import HomepageBg from "@/components/custom/homepage-svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="fixed botttom-0 right-0 z-50 p-10">
+            <ModeToggle />
+          </div>
+          <div className="relative min-h-screen isolate overflow-hidden bg-background">
+            <HomepageBg />
+            <div className="mx-auto max-w-7xl px-3 md:px-6 pb-24 pt-10 sm:pb-32 lg:flex gap-16 lg:px-8 lg:pt-24 lg:pb-16">
+              {children}
+            </div>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

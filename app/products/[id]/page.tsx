@@ -27,11 +27,11 @@ const ProductPage: FC<ProductPageProps> = async ({ params }) => {
   if (!product) return notFound();
 
   return (
-    <div className="py-2 md:py-8 px-5 md:px-12 divide-y divide-zinc-100 bg-white shadow-md rounded-md animate-fade-in">
+    <div className="py-2 md:py-8 px-5 md:px-12 divide-y divide-zinc-100 bg-background shadow-md rounded-md animate-fade-in">
       <div>
         <div className="mt-4 flex gap-x-5">
           <BackButton />
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
             {product.name}
           </h1>
         </div>
@@ -50,7 +50,7 @@ const ProductPage: FC<ProductPageProps> = async ({ params }) => {
 
         <div className="mt-4">
           <div className="flex items-center">
-            <p className="font-medium text-gray-900">
+            <p className="font-medium text-foreground">
               ${product.price.toFixed(2)}
             </p>
           </div>
